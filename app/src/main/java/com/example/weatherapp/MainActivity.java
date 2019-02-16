@@ -1,8 +1,10 @@
 package com.example.weatherapp;
 
 import android.os.AsyncTask;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +20,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Time;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         editTextCity = findViewById(R.id.editTextCity);
         textViewWeather = findViewById(R.id.textViewWeather);
+
+
+//        Date sunset = new Date(1550328327);
+//        Time time = new Time(sunset.getTime());
+//        Log.i("sunset", String.valueOf(time));
     }
 
     public void onClickShowWeather(View view) {
